@@ -5,3 +5,33 @@
 body {
   font-family: "Inter", sans-serif;
 }
+.heroSection {
+  background: linear-gradient(to top, #50281dd2, #50281dd2),
+    url("./assets/photo1.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.photo0 {
+  background: url("./assets/photo4.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: 0.5s;
+}
+.container {
+  transition: 0.5s;
+}
+.photo1 {
+  background: url("./assets/photo2.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.photo2 {
+  background: url("./assets/photo3.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
