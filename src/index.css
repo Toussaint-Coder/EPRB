@@ -18,10 +18,15 @@ body {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  transition: 0.5s;
+}
+.butSection {
+  background: linear-gradient(to top, #50281dd2, #50281dd2),
+    url("./assets/photo6.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .container {
-  transition: 0.5s;
 }
 .photo1 {
   background: url("./assets/photo2.jpeg");
