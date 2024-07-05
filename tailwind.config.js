@@ -8,6 +8,7 @@ export default {
         secondary: "#50281D",
       },
       screens: {
+        xxs: "250px",
         xs: "480px",
         sm: "768px",
         md: "834px",

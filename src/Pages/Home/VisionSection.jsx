@@ -32,7 +32,7 @@ export default function VisionSection() {
   }
   return (
     <>
-      <div className="w-full min-h-80 flex flex-col gap-10">
+      <div className="w-full min-h-80 flex flex-col gap-10 xxs:px-4 xl:px-0">
         <Container className="flex justify-between items-center h-10 border-l-2 border-primary">
           <div className="pl-4">
             <h2 className="text-xl text-primary">Notre Vision</h2>
@@ -41,11 +41,11 @@ export default function VisionSection() {
             <Button className="text-sm">En Savoir Plus</Button>
           </div>
         </Container>
-        <Container className="flex justify-between items-stretch gap-8">
+        <Container className="flex lg:justify-between lg:items-stretch xxs:flex-col lg:flex-row md:items-center md:justify-center gap-8 xs:px-0 xxs:justify-center xxs:items-center  xl:px-0 border">
           {VisionsData.map((Vision) => {
             return (
               <div
-                className="flex-1 container relative flex flex-col border border-secondary"
+                className="flex-1 relative flex flex-col border border-secondary"
                 key={Vision.key}
                 onMouseEnter={handlerHovered}
                 onMouseLeave={removeHover}
@@ -54,11 +54,13 @@ export default function VisionSection() {
                   className={`h-80 w-full overflow-hidden relative ${Vision.className}`}
                 >
                   <RotatedContainer />
-                  <div className="w-full h-full duration-100 bg-[#50281dd2] hover:bg-[#50281d00]" />
+                  <div className="w-full h-full duration-100 bg-[#50281dd2]/50 hover:bg-[#50281d00]" />
                 </div>
                 <div className="w-full flex flex-col gap-2 px-4 pb-4">
                   <h2 className="text-xl font-medium">{Vision.Title}</h2>
-                  <p className="text-sm">{Vision.Description}</p>
+                  <p className="text-sm leading-6 text-black/85">
+                    {Vision.Description}
+                  </p>
                 </div>
               </div>
             )

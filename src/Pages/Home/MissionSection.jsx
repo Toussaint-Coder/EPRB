@@ -27,7 +27,7 @@ export default function MissionSection() {
   ]
   return (
     <>
-      <div className="w-full min-h-80 flex flex-col gap-10">
+      <div className="w-full min-h-80 flex flex-col gap-10  xxs:px-4 xl:px-0">
         <Container className="flex justify-between items-center h-10 border-l-2 border-primary">
           <div className="pl-4">
             <h2 className="text-xl text-primary">Notre Mission</h2>
@@ -37,10 +37,14 @@ export default function MissionSection() {
           </div>
         </Container>
         {Missions.map((Mission) => (
-          <Container className="flex flex-col " key={Mission.key}>
+          <Container className="flex flex-col" key={Mission.key}>
             <div className="w-full flex gap-5">
               <div className="w-16">
-                <img src={Mission.Icon} alt="Icon" className="w-16" />
+                <img
+                  src={Mission.Icon}
+                  alt="Icon"
+                  className="xxs:w-12 sm:w-16"
+                />
               </div>
               <div className="flex-1">
                 <h2 className="text-primary text-xl font-semibold">

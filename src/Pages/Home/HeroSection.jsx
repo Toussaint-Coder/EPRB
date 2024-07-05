@@ -3,11 +3,11 @@ import RotatedContainer from "../../Components/RotatedContainer"
 export default function HeroSection() {
   return (
     <>
-      <div className="w-full min-h-[500px] flex justify-center items-center heroSection transform -translate-y-0 relative overflow-hidden">
-        <div className="max-w-lg flex flex-col gap-10">
+      <div className="w-full min-h-[500px] flex justify-center items-center heroSection transform -translate-y-0 relative overflow-hidden duration-300">
+        <div className="max-w-lg flex flex-col gap-10 xxs:px-4 sm:px-0">
           <div>
-            <h1 className="text-white text-3xl font-semibold">
-              SOYEZ LE BIENVENUE A L’EGLISE <br /> PROTESTANTE{"   "}
+            <h1 className="text-white xs:text-3xl font-semibold duration-200 xxs:text-2xl ">
+              SOYEZ LE BIENVENUE A L’EGLISE <br /> PROTESTANTE
               <b className="-tracking-[8px]">-------------</b>
               {"   "} EPRB
             </h1>

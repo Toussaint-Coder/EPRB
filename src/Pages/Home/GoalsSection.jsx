@@ -7,8 +7,8 @@ import WatchIcon from "../../assets/watch.svg"
 export default function GoalsSection() {
   return (
     <>
-      <div className="w-full bg-gray-100 max-h-40">
-        <Container className="flex justify-between items-center">
+      <div className="w-full bg-gray-100 xxs:min-h-40 sm:max-h-40">
+        <Container className="flex justify-between items-center xxs:flex-col sm:flex-row xxs:gap-8 sm:gap-0">
           <div className="h-full flex flex-col items-center justify-center p-5 gap-2">
             <div>
               <img src={churchIcon} alt="Icon" />
