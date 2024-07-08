@@ -7,6 +7,34 @@ body {
   background: white;
 }
 .heroSection {
+  background: linear-gradient(to top, #50281d88, #50281d88),
+    url("./assets/photo1.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Picture1-History {
+  background: linear-gradient(to top, #50281d88, #50281d88),
+    url("./assets/photo1.png");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Picture2-History {
+  background: linear-gradient(to top, #50281d88, #50281d88),
+    url("./assets/photo4.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Picture3-History {
+  background: linear-gradient(to top, #50281d88, #50281d88),
+    url("./assets/photo6.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+heroSection-History {
   background: linear-gradient(to top, #50281dd2, #50281dd2),
     url("./assets/photo1.png");
   background-position: center;

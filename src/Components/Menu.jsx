@@ -4,11 +4,14 @@ import { useEffect, useRef, useState } from "react"
 import Footer from "./Footer"
 import MenuIcon from "../assets/menu.svg"
 import SlideMenu from "./sideMenu"
+import { useLocation } from "react-router-dom"
 export default function Menu() {
   const [ScreenResize, setScreenResize] = useState(false)
   const menuContainer = useRef(null)
   const [crtPage, setCrtPage] = useState(false)
   const [openMenu, setOpeMenu] = useState(false)
+  const Location = useLocation()
+  const [menuClass, setMenuClass] = useState("")
 
   function handlerSideMenu() {
     setOpeMenu((openMenu) => !openMenu)
@@ -26,35 +29,54 @@ export default function Menu() {
     }
   }
 
-  const currentPage = document.URL.split("/")
+  useEffect(() => {
+    const currentPage = document.URL.split("/")
+
+    switch (currentPage.at(-1)) {
+      case "":
+        setCrtPage("Home")
+        break
+      case "History":
+        setCrtPage("History")
+        break
+      case "Vision":
+        setCrtPage("Vision")
+        break
+      case "Mission":
+        setCrtPage("Mission")
+        break
+      case "Goal":
+        setCrtPage("Goal")
+        break
+      case "Ministries":
+        setCrtPage("Ministries")
+        break
+      default:
+        setCrtPage("Home")
+    }
+    console.log(crtPage)
+
+    return () => {}
+  }, [Location.pathname])
 
   useEffect(() => {
-    function TogglePage() {
-      switch (currentPage.at(-1)) {
-        case "":
-          setCrtPage("Home")
-          break
-        case "History":
-          setCrtPage("History")
-          break
-        case "Vision":
-          setCrtPage("Vision")
-          break
-        case "Mission":
-          setCrtPage("Mission")
-          break
-        case "Goal":
-          setCrtPage("Goal")
-          break
-        case "Ministries":
-          setCrtPage("Ministries")
-          break
-        default:
-          setCrtPage("Home")
+    console.log(crtPage === "History")
+    const getMenuClasses = () => {
+      if (crtPage === "History") {
+        return "bg-primary sticky top-0"
       }
+      if (!ScreenResize) {
+        return "bg-primary/0 top-first0 absolute"
+      }
+      return "bg-primary sticky top-0"
     }
-    setInterval(TogglePage, 0)
-  }, [crtPage])
+
+    const updatedMenuClass = getMenuClasses()
+    setMenuClass(updatedMenuClass)
+
+    console.log(crtPage)
+  }, [crtPage, ScreenResize])
+
   return (
     <>
       <SlideMenu
@@ -62,11 +84,7 @@ export default function Menu() {
         className={`${openMenu ? "right-0" : "-right-full"} ease-in-out`}
       />
       <div
-        className={`py-4 duration-1000 z-30 xxs:px-4 xl:px-0 ${
-          !ScreenResize
-            ? "bg-primary/0 top-first0 absolute"
-            : "bg-primary sticky top-0"
-        } w-full z-10`}
+        className={`py-4 z-30 xxs:px-4 xl:px-0 w-full ${menuClass}`}
         ref={menuContainer}
       >
         <Container className="flex justify-between items-center">

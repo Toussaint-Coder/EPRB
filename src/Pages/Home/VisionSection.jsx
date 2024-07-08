@@ -41,7 +41,7 @@ export default function VisionSection() {
             <Button className="text-sm">En Savoir Plus</Button>
           </div>
         </Container>
-        <Container className="flex lg:justify-between lg:items-stretch xxs:flex-col lg:flex-row md:items-center md:justify-center gap-8 xs:px-0 xxs:justify-center xxs:items-center  xl:px-0 border">
+        <Container className="flex lg:justify-between lg:items-stretch xxs:flex-col lg:flex-row md:items-center md:justify-center gap-8 xs:px-0 xxs:justify-center xxs:items-center  xl:px-0">
           {VisionsData.map((Vision) => {
             return (
               <div
@@ -57,7 +57,9 @@ export default function VisionSection() {
                   <div className="w-full h-full duration-100 bg-[#50281dd2]/50 hover:bg-[#50281d00]" />
                 </div>
                 <div className="w-full flex flex-col gap-2 px-4 pb-4">
-                  <h2 className="text-xl font-medium">{Vision.Title}</h2>
+                  <h2 className="text-xl font-medium text-secondary">
+                    {Vision.Title}
+                  </h2>
                   <p className="text-sm leading-6 text-black/85">
                     {Vision.Description}
                   </p>

@@ -4,6 +4,7 @@ import React from "react"
 import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
+import { settings } from "../../Components/SlideSettings"
 export default function ButSection() {
   const Buts = [
     {
@@ -19,18 +20,6 @@ export default function ButSection() {
       but: `L'EPRB considère l'éducation comme un levier puissant pour le développement global et individuel. Son objectif est de fournir une éducation de qualité qui intègre des principes chrétiens dans le curriculum, aidant ainsi les jeunes à grandir dans la foi tout en acquérant les compétences nécessaires pour réussir dans la vie. L'Église établit et gère des écoles primaires et secondaires, offrant un environnement d'apprentissage sûr et enrichissant. De plus, elle soutient des centres de formation professionnelle où les jeunes et les adultes peuvent acquérir des compétences pratiques telles que la menuiserie, la couture et l'informatique.`,
     },
   ]
-  const settings = {
-    infinite: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    className: "max-w-4xl w-full h-auto flex items-center justify-center",
-    pauseOnHover: true,
-    arrows: false,
-    rtl: true,
-    adaptiveHeight: true,
-  }
 
   return (
     <>
@@ -46,7 +35,7 @@ export default function ButSection() {
         <Container className="butSection min-h-96 flex items-center justify-center">
           <Slider {...settings}>
             {Buts.map((But) => (
-              <div className="" key={But.key}>
+              <div className="max-w-4xl" key={But.key}>
                 <p className="text-white italic leading-7 xxs:text-sm lg:text-base px-4">
                   {But.but}
                 </p>
