@@ -40,7 +40,7 @@ export default function Footer() {
             </li>
           </ul>
         </Container>
-        <Container className="border-b border-b-white" />
+        <Container className="border-b border-b-white/15" />
         <Container className="flex items-center justify-between xxs:flex-col sm:flex-row xxs: gap-8">
           <ul className="items-center justify-center flex gap-14">
             <li className="">

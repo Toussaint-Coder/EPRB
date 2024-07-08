@@ -24,12 +24,14 @@ export default function VisionSection() {
     },
   ]
   const [Hovered, setHovered] = useState(false)
-  function handlerHovered() {
-    setHovered(true)
+  function handlerHovered(Id) {
+    VisionsData.forEach((Vision) => {
+      if (Id === Vision.key) setHovered(true)
+
+      if (Id !== Vision.key) setHovered(false)
+    })
   }
-  function removeHover() {
-    setHovered(false)
-  }
+
   return (
     <>
       <div className="w-full min-h-80 flex flex-col gap-10 xxs:px-4 xl:px-0">
@@ -47,14 +49,19 @@ export default function VisionSection() {
               <div
                 className="flex-1 relative flex flex-col border border-secondary"
                 key={Vision.key}
-                onMouseEnter={handlerHovered}
-                onMouseLeave={removeHover}
+                onMouseEnter={() => {
+                  handlerHovered(Vision.key)
+                }}
               >
                 <div
                   className={`h-80 w-full overflow-hidden relative ${Vision.className}`}
                 >
                   <RotatedContainer />
-                  <div className="w-full h-full duration-100 bg-[#50281dd2]/50 hover:bg-[#50281d00]" />
+                  <div
+                    className={`w-full h-full duration-100 ${
+                      Hovered ? "bg-[#50281d00]" : "hover: bg-[#50281dd2]/50"
+                    }`}
+                  />
                 </div>
                 <div className="w-full flex flex-col gap-2 px-4 pb-4">
                   <h2 className="text-xl font-medium text-secondary">

@@ -35,7 +35,7 @@ export default function ButSection() {
         <Container className="butSection min-h-96 flex items-center justify-center">
           <Slider {...settings}>
             {Buts.map((But) => (
-              <div className="max-w-4xl" key={But.key}>
+              <div className="max-w-4xl mx-auto" key={But.key}>
                 <p className="text-white italic leading-7 xxs:text-sm lg:text-base px-4">
                   {But.but}
                 </p>
