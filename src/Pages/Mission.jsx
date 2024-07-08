@@ -1,7 +1,7 @@
 export default function Mission() {
   return (
     <>
-      <h1>Mission Page</h1>
+      <h1>Page Under Construction</h1>
     </>
   )
 }

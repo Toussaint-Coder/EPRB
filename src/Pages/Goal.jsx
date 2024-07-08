@@ -1,7 +1,7 @@
 export default function Goal() {
   return (
     <>
-      <h1>Goal Page</h1>
+      <h1>Page Under Construction</h1>
     </>
   )
 }

@@ -62,7 +62,13 @@ export default function Menu() {
   useEffect(() => {
     console.log(crtPage === "History")
     const getMenuClasses = () => {
-      if (crtPage === "History" || crtPage === "Vision") {
+      if (
+        crtPage === "History" ||
+        crtPage === "Vision" ||
+        crtPage === "Mission" ||
+        crtPage === "Goal" ||
+        crtPage === "Ministries"
+      ) {
         return "bg-primary sticky top-0"
       }
       if (!ScreenResize) {
