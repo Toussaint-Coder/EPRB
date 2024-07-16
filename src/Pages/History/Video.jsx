@@ -2,6 +2,7 @@ import Video4 from "../../assets/videos/o4.mp4"
 import Video5 from "../../assets/videos/5.mp4"
 import Video1 from "../../assets/videos/1.mp4"
 import Container from "../../Components/Container"
+import { Suspense } from "react"
 export default function Video() {
   const Videos = [
     {
@@ -50,11 +51,15 @@ export default function Video() {
               </h1>
               <p className="leading-8 text-base">{Video.Description}</p>
             </div>
-            <video
-              src={Video.VideoSrc}
-              controls
-              className="shadow-lg shadow-black/15"
-            />
+            <Suspense
+              fallback={<p className="font-semibold">Loadind the map...</p>}
+            >
+              <video
+                src={Video.VideoSrc}
+                controls
+                className="shadow-lg shadow-black/15"
+              />
+            </Suspense>
           </div>
         ))}
       </Container>
