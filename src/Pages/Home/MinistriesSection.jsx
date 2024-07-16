@@ -6,7 +6,7 @@ import { Suspense } from "react"
 export default function Ministries() {
   return (
     <>
-      <div className="w-full flex flex-col gap-10">
+      <div className="w-full flex flex-col gap-10" id="Ministries">
         <div className="xxs:px-4 xl:px-0">
           <Container className="flex justify-between items-center h-10 border-l-2 border-primary ">
             <div className="pl-4">

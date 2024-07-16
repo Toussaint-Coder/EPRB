@@ -142,7 +142,7 @@ export default function Menu() {
                   : ""
               }`}
             >
-              <Link to="/Ministries">Ministères</Link>
+              <a href="#Ministries">Ministère</a>
             </li>
           </ul>
           <div className="flex items-center">

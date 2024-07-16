@@ -44,11 +44,16 @@ export default function Footer() {
         <Container className="flex items-center justify-between xxs:flex-col sm:flex-row xxs: gap-8">
           <ul className="items-center justify-center flex gap-14">
             <li className="">
-              <img
-                src={fbIcon}
-                alt="Icon"
-                className="w-5 h-5 duration-200 hover:opacity-100"
-              />
+              <a
+                href="https://www.facebook.com/profile.php?id=100069776657266"
+                target="_blank"
+              >
+                <img
+                  src={fbIcon}
+                  alt="Icon"
+                  className="w-5 h-5 duration-200 hover:opacity-100"
+                />
+              </a>
             </li>
             <li className="">
               <img
@@ -65,11 +70,16 @@ export default function Footer() {
               />
             </li>
             <li className="">
-              <img
-                src={ytIcon}
-                alt="Icon"
-                className="w-5 h-5 duration-200 hover:opacity-100"
-              />
+              <a
+                href="https://www.youtube.com/@sgcctvofficial8790"
+                target="_blank"
+              >
+                <img
+                  src={ytIcon}
+                  alt="Icon"
+                  className="w-5 h-5 duration-200 hover:opacity-100"
+                />
+              </a>
             </li>
           </ul>
           <div className="flex flex-col gap-2">
