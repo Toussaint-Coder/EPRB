@@ -1,11 +1,12 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Home from "./Pages/Home/Home"
 import Vision from "./Pages/Vision/Vision"
-import Mission from "./Pages/Mission"
-import Goal from "./Pages/Goal"
+import Mission from "./Pages/Mission/Mission"
+import Goal from "./Pages/Goal/Goal"
 import History from "./Pages/History/History"
-import Ministries from "./Pages/Ministries"
+import Ministries from "./Pages/Ministrie/Ministrie"
 import Menu from "./Components/Menu"
+import DonationForm from "./Pages/Donate/DonationForm"
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
             <Route path="Goal" element={<Goal />} />
             <Route path="History" element={<History />} />
             <Route path="Ministries" element={<Ministries />} />
+            <Route path="Donate" element={<DonationForm />} />
           </Route>
         </Routes>
       </BrowserRouter>

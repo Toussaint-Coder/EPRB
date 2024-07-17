@@ -5,7 +5,7 @@ import Slider from "react-slick"
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import { settings } from "../../Components/SlideSettings"
-export default function ButSection() {
+export default function ButSection({ children }) {
   const Buts = [
     {
       key: 0,
@@ -24,14 +24,7 @@ export default function ButSection() {
   return (
     <>
       <div className="w-full min-h-80 flex flex-col gap-10 xxs:px-4 xl:px-0">
-        <Container className="flex justify-between items-center h-10 border-l-2 border-primary">
-          <div className="pl-4">
-            <h2 className="text-xl text-primary">Notre But</h2>
-          </div>
-          <div>
-            <Button className="text-xs">En Savoir Plus</Button>
-          </div>
-        </Container>
+        {children}
         <Container className="butSection min-h-96 flex items-center justify-center">
           <Slider {...settings}>
             {Buts.map((But) => (

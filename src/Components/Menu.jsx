@@ -51,8 +51,11 @@ export default function Menu() {
       case "Ministries":
         setCrtPage("Ministries")
         break
+      case "Donate":
+        setCrtPage("Donate")
+        break
       default:
-        setCrtPage("Home")
+        setCrtPage("")
     }
     console.log(crtPage)
 
@@ -60,14 +63,14 @@ export default function Menu() {
   }, [Location.pathname])
 
   useEffect(() => {
-    console.log(crtPage === "History")
     const getMenuClasses = () => {
       if (
         crtPage === "History" ||
         crtPage === "Vision" ||
         crtPage === "Mission" ||
         crtPage === "Goal" ||
-        crtPage === "Ministries"
+        crtPage === "Ministries" ||
+        crtPage === "Donate"
       ) {
         return "bg-primary sticky top-0"
       }
@@ -142,7 +145,7 @@ export default function Menu() {
                   : ""
               }`}
             >
-              <a href="#Ministries">Ministère</a>
+              <Link to="/Ministries">Ministère</Link>
             </li>
           </ul>
           <div className="flex items-center">
@@ -152,9 +155,11 @@ export default function Menu() {
             >
               <img src={MenuIcon} alt="Icon" className="w-6" />
             </button>
-            <button className="px-4 py-1 border border-white text-sm text-white">
-              Faire un don
-            </button>
+            <Link to="/Donate">
+              <button className="px-4 py-1 border border-white text-sm text-white">
+                Faire un don
+              </button>
+            </Link>
           </div>
         </Container>
       </div>

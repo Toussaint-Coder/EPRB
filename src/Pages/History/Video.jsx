@@ -36,7 +36,7 @@ export default function Video() {
   /***/
   return (
     <>
-      <Container className="flex flex-col gap-10 mb-10  xxs:px-4 lg:px-0">
+      <Container className="flex flex-col gap-20 mb-10  xxs:px-4 lg:px-0">
         {Videos.map((Video) => (
           <div
             className={`xxs:flex-col-reverse items-center w-full flex flex-cols gap-4  ${

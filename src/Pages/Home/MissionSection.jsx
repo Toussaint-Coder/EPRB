@@ -4,7 +4,7 @@ import StudentsIcon from "../../assets/students.svg"
 import ChartIcon from "../../assets/chart.svg"
 import CrossIcon from "../../assets/cros.svg"
 
-export default function MissionSection() {
+export default function MissionSection({ children }) {
   const Missions = [
     {
       key: 0,
@@ -28,14 +28,7 @@ export default function MissionSection() {
   return (
     <>
       <div className="w-full min-h-80 flex flex-col gap-10  xxs:px-4 xl:px-0">
-        <Container className="flex justify-between items-center h-10 border-l-2 border-primary">
-          <div className="pl-4">
-            <h2 className="text-xl text-primary">Notre Mission</h2>
-          </div>
-          <div>
-            <Button className="text-sm">En Savoir Plus</Button>
-          </div>
-        </Container>
+        {children}
         {Missions.map((Mission) => (
           <Container className="flex flex-col" key={Mission.key}>
             <div className="w-full flex gap-5">
